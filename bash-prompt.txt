@@ -1,0 +1,5 @@
+# I've moved this available on github:
+#
+#    http://github.com/kyleburton/krb-bash-utils/tree/master
+#
+#
