@@ -1,0 +1,30 @@
+Getting git:
+
+  http://gitready.com
+  http://git-scm.com/
+
+Introductions, Videos, software and internals:
+
+  http://gitcasts.com/
+  http://learn.github.com/
+  http://www.eecs.harvard.edu/~cduan/technical/git/
+
+Hosting Git Repositories:
+
+  http://github.com/
+
+Books:
+
+  http://peepcode.com/products/git-internals-pdf
+  http://pragprog.com/titles/tsgit/pragmatic-version-control-using-git
+
+Windows Git:
+
+  http://code.google.com/p/msysgit/
+
+
+Philly Lambda Members:
+
+  Mat Schaffer
+    http://github.com/matschaffer/profile
+
