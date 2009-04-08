@@ -1,0 +1,159 @@
+# help
+git help
+git
+git help clone
+git clone --help
+
+
+git config alias.st status
+cat ~/git.env
+
+# clone a remote repository
+git clone git://github.com/dustin/java-memcached-client.git
+cd java-memcached-client/
+ls
+
+# that was 3.4mb
+du -sh ./
+
+# quick look at what was going on, jump to 1435 to see some branching git log --color --graph
+
+# graphical view
+gitk
+
+
+####################
+# lets make some changes
+diff --git a/buildfile b/buildfile
+index 8009edc..d5db785 100644
+--- a/buildfile
++++ b/buildfile
+@@ -62,4 +62,7 @@ define "memcached" do
+   cobertura.exclude 'net.spy.memcached.BuildInfo'
+
+ end
++
++puts "this is a change to the file"
++
+ # vim: syntax=ruby et ts=2
+####################
+
+git diff
+git status
+
+# oops, lets not do that on the head
+git branch krbtest
+git checkout krbtest
+
+# ...oh! look at that, we can branch after we made some changes
+
+# stage the change
+git add buildfile 
+
+# commit it to our branch
+git commit -m 'made a change'
+
+git status
+git log
+
+# what's it look like?
+git diff 18662e634fed513a79f675503c4bad0b76528f2a
+
+# there are symbolic names for thos:
+git diff HEAD
+
+# ^ == 'minus one'
+git diff HEAD^
+
+# ^^ == 'minus two'
+# ~5 == 'minus 5'
+
+# yep, there it is
+git diff master
+
+# what branches exist? and where are we again?
+git branch
+git checkout master
+
+# pull in the changes
+git merge krbtest
+git status
+git diff HEAD^
+
+# notice that I didn't have to type '| less', git did that 
+git log --graph --color
+
+# lets browse around
+gitk
+
+# notice we don't see 'branching' - this is b/c the changesets were linear # so lets to make a conflict...
+
+git checkout krbtest
+gitk
+ls
+vi buildfile
+git status
+git commit -a 'changed'
+git commit -a -m 'changed'
+ls
+
+# lets uppercase the license file
+cat LICENSE.txt
+tr a-z A-Z < LICENSE.txt
+tr a-z A-Z < LICENSE.txt  > x
+mv x LICENSE.txt
+ls
+git status
+git commit -a -m 'upcase'
+gitk
+git branch
+git status
+git checkout master
+gitk
+ls
+# make a conflicting change in LICENSE.txt 
+vi LICENSE.txt 
+git status 
+git commit -a -m 'conflict'
+git checkout krbtest
+gitk
+git checkout master
+git status
+git checkout krbtest
+git checkout msater
+git checkout master
+git status
+gitk
+git checkout krbtest
+gitk
+git merge master
+
+# fix the conflict
+vi LICENSE.txt
+git commit -a -m 'merged master'
+git status
+git checkout master
+# what do things look like now?
+gitk
+
+# pull back into master
+git merge krbtest
+git status
+# now we can see the branch/conflict
+gitk
+
+
+
+
+########
+# oh, lets look for something in _all_ the tagged versions of the source
+git grep 'java.util.Map' $(git tag -l)
+
+# how about across _all_ revisions, yeah, you heard me, _all_ of 'em
+git grep 'java.util.Map' $(git log --pretty=format:%H)
+
+
+########
+git instaweb --start
+## open up http://kburton-lin2.ws.hmsonline.com:1234/
+git instaweb --stop
