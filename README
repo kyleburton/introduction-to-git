@@ -6,14 +6,14 @@ Abstract:
 
 Source Code Management and Version Control Systems are tools for
 helping you track your file based assets (typically source code).
-Traditional SCM systems are centralized (CVS, Subversion, Visual
-Source Safe), Distributed version control systmes systems provide new
+Traditional SCM systems are centralised (CVS, Subversion, Visual
+Source Safe), Distributed version control systems systems provide new
 capabilities, work-flows, are becoming mature and are gaining mind
 share in the open source community.
 
 Git is one of those Distributed Version Control Systems. It was
 invented by the creator of Linux (Linus Torvalds) for protecting the
-linux kernel source code and coordinating the activity of hundreds of
+Linux kernel source code and coordinating the activity of hundreds of
 developers. This talk discusses what Distributed Version Control is,
 the history of Git, basic version control features and some very
 uncommon and amazing capabilities of git. Time permitting it will
@@ -21,3 +21,4 @@ include live demonstration of the tools.
 
 Come and hear how Git has reset my expectations for what VCS tools
 should be capable of and how they should perform.
+
