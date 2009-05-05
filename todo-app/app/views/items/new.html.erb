@@ -1,0 +1,43 @@
+<h1>New item</h1>
+
+<% form_for(@item) do |f| %>
+  <%= f.error_messages %>
+
+  <table border="0">
+    <tr>
+      <td><%= f.label :category %></td>
+      <td><%= f.text_field :category, :size => 35 %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :item %></td>
+      <td><%= f.text_area :item, :cols => 40, :rows => 3 %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :completed %></td>
+      <td><%= f.check_box :completed %></td>
+    </tr>
+    <tr>
+      <td align="right" colspan="2"><%= f.submit 'Add' %></td>
+    </tr>
+  </table>
+
+<!--
+  <p>
+    <%= f.label :category %><br />
+    <%= f.text_field :category %>
+  </p>
+  <p>
+    <%= f.label :item %><br />
+    <%= f.text_area :item %>
+  </p>
+  <p>
+    <%= f.label :completed %><br />
+    <%= f.check_box :completed %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+-->
+<% end %>
+
+<%= link_to 'Back', items_path %>

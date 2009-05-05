@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  category: MyString
+  item: MyText
+  completed: false
+
+two:
+  category: MyString
+  item: MyText
+  completed: false

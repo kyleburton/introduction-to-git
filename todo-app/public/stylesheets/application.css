@@ -19,11 +19,33 @@
   color: #7F7;
 }
 
-.body div {
+.main-body {
   background-color: #777;
   padding: 1em 1em 1em 1em;
 }
 
 .body a {
   font-weight: bold;
+  color: #000;
+}
+
+
+.body a:visited {
+  font-weight: bold;
+  color: #000;
+}
+
+
+.data-table th {
+  background-color: #CCC;
+  padding: 1em 1em 1em 1em;
+  font-weight: bold;
+  color: #000;
+  font-size: 125%;
+}
+
+
+.data-table td {
+  background-color: #EEE;
+  padding: 1em 1em 1em 1em;
 }
