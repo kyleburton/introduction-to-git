@@ -24,17 +24,16 @@
   padding: 1em 1em 1em 1em;
 }
 
-.body a {
+a {
   font-weight: bold;
   color: #000;
 }
 
 
-.body a:visited {
+a:visited {
   font-weight: bold;
   color: #000;
 }
-
 
 .data-table th {
   background-color: #CCC;
