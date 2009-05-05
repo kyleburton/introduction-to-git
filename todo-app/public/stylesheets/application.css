@@ -1,0 +1,29 @@
+.centered {
+    align: center;
+}
+
+.body {
+    background-color: #AAA;
+    padding: 2em 2em 2em 2em;
+    width: 67%;
+    align: center;
+}
+
+.body h2 {
+  color: #22F;
+  padding: 1em 1em 1em 1em;
+  background-color: #777;
+}
+
+.body p {
+  color: #7F7;
+}
+
+.body div {
+  background-color: #777;
+  padding: 1em 1em 1em 1em;
+}
+
+.body a {
+  font-weight: bold;
+}
