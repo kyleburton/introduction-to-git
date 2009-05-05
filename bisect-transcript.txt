@@ -1,0 +1,8 @@
+cp ~/bug-test.sh 
+chmod ~/bug-test.sh 
+git bisect start
+git bisect good todo-1.0
+git bisect bad HEAD
+git bisect run ~/bug-test.sh 
+git diff f482bebebbd0c01158e11b365b0253adeb034633 842ff11fd5954641f79672d3d24c0cdbd7f82adc
+git bisect reset
