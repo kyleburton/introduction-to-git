@@ -42,6 +42,10 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(params[:item])
 
+    if @item.item =~ /bug/i
+      raise "OH HAI, U HZ A BUG"
+    end
+
     respond_to do |format|
       if @item.save
         flash[:notice] = 'Item was successfully created.'
