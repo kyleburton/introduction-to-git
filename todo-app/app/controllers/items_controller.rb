@@ -86,4 +86,18 @@ class ItemsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def export
+    data = [ ["ID", "CATEGORY", "ITEM", "COMPLETED"].join("\t"),
+             Item.find(:all).map {|item|
+               [item.id,
+                item.category,
+                item.item.gsub(/([\r\n])/,"\\$1"),
+                item.completed ? "Y" : "N"
+               ].join("\t")
+             }
+           ].join("\n")
+    
+    render :text => data, :content_type => "text/plain"
+  end
 end
