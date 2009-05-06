@@ -50,3 +50,9 @@ a:visited {
   background-color: #EEE;
   padding: 1em 1em 1em 1em;
 }
+
+
+.notice {
+    color: #A33;
+    font-size: 125%;
+}

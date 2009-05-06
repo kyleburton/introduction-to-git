@@ -12,7 +12,10 @@
 
 
 <div class="centered" align="center">
-  <div class="body">
+<div class="body">
+   <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
     <%= yield %>
   </div>
 </div>
