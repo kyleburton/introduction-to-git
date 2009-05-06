@@ -1,4 +1,4 @@
-<h1>Listing items</h1>
+<h1>Yo&uuml;r Items</h1>
 
 <table class="data-table">
   <tr>
@@ -15,7 +15,7 @@
     <td><%=h item.category %></td>
     <td><%=h item.item %></td>
     <td><%= link_to 'Edit', edit_item_path(item) %></td>
-    <td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', item, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

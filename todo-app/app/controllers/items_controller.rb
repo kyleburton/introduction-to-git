@@ -48,7 +48,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
-        flash[:notice] = '&Uuml;ber-d&Uuml;ber-do! (created)'
+        flash[:notice] = '&Uuml;ber-d&uuml;ber-do! (created)'
         format.html { redirect_to(@item) }
         format.xml  { render :xml => @item, :status => :created, :location => @item }
       else
@@ -65,7 +65,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.update_attributes(params[:item])
-        flash[:notice] = '&Uuml;ber-d&Uuml;ber-do! (updated)'
+        flash[:notice] = '&Uuml;ber-d&uuml;ber-do! (updated)'
         format.html { redirect_to(@item) }
         format.xml  { head :ok }
       else

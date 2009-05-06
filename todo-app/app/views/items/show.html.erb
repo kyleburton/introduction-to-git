@@ -1,18 +1,12 @@
-<p>
-  <b>Category:</b>
-  <%=h @item.category %>
-</p>
 
-<p>
-  <b>Item:</b>
-  <%=h @item.item %>
-</p>
 
-<p>
-  <b>Completed:</b>
-  <%=h @item.completed %>
+<p class="show-todo">
+  <%=h @item.category %> 
+| <%=h @item.item %> 
+| <td><%= @item.completed ? '(completed, good for you!)' : '(still to do)' %></td>
 </p>
 
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Your Items', items_path %>
+
+<%= link_to 'Edit This', edit_item_path(@item) %> |
+<%= link_to 'View Your Items', items_path %>

@@ -30,7 +30,6 @@ a {
   text-decoration: none;
 }
 
-
 a:visited {
   font-weight: bold;
   color: #000;
@@ -45,12 +44,17 @@ a:visited {
   font-size: 125%;
 }
 
-
 .data-table td {
   background-color: #EEE;
   padding: 1em 1em 1em 1em;
 }
 
+.show-todo {
+  font-size: 150%;
+  background-color: #777;
+  color: #000;
+  padding: 1em 1em 1em 1em;
+}
 
 .notice {
     color: #A33;

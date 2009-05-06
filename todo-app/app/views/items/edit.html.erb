@@ -17,10 +17,9 @@
       <td><%= f.check_box :completed %></td>
     </tr>
     <tr>
-      <td align="right" colspan="2"><%= f.submit 'Update' %></td>
+      <td align="right" colspan="2"><%= f.submit 'Save' %></td>
     </tr>
   </table>
 <% end %>
 
-<%= link_to 'Show', @item %> |
-<%= link_to 'Back', items_path %>
+<%= link_to 'View Items', items_path %>
